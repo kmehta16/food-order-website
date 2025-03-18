@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Categorie</title>
+  </head>
+  <body class="cat-body">
+    <nav class="navbar h-nav-resp">
+      <ul class="nav-list v-class-resp">
+        <div class="logo"><img src="images/food_logo.jpg" alt="food" /></div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="menu.html">Menu</a></li>
+      </ul>
+      <div class="rightNav v-class-resp">
+        <input
+          type="text"
+          name="search"
+          id="searchBar"
+          onkeyup="searchFood()"
+          placeholder="Search Food..."
+        />
+        <button class="btn btn-sm" onclick="searchFood()">Search</button>
+      </div>
+      <div class="hemburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <section class="cat-menu" id="cat-id">
+      <div class="pizza">
+        <h2 class="cat-food">Pizza</h2>
+        <div id="foodList">
+          <div class="catfood-item">
+            <h3 class="cat-h">Margherita Pizza</h3>
+            <p class="cat-p">₹299</p>
+            <button class="catbtn" onclick="addToCart('Margherita Pizza', 299)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Pepperoni Pizza</h3>
+            <p class="cat-p">₹400</p>
+            <button class="catbtn" onclick="addToCart('Pepperoni Pizza', 400)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Veggie Supreme Pizza</h3>
+            <p class="cat-p">₹350</p>
+            <button
+              class="catbtn"
+              onclick="addToCart('Veggie Supreme Pizza', 350)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Cheese Burst Pizza</h3>
+            <p class="cat-p">₹560</p>
+            <button
+              class="catbtn"
+              onclick="addToCart('Cheese Burst Pizza', 560)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="drinks">
+        <h2 class="cat-food">Drinks</h2>
+        <div id="foodList">
+          <div class="catfood-item">
+            <h3 class="cat-h">Coke</h3>
+            <p class="cat-p">₹40</p>
+            <button class="catbtn" onclick="addToCart('Coke', 40)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Pepsi</h3>
+            <p class="cat-p">₹30</p>
+            <button class="catbtn" onclick="addToCart('Pepsi', 30)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Fanta</h3>
+            <p class="cat-p">₹20</p>
+            <button class="catbtn" onclick="addToCart('Fanta', 20)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Sprite</h3>
+            <p class="cat-p">₹50</p>
+            <button class="catbtn" onclick="addToCart('Sprite', 50)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="burger">
+        <h2 class="cat-food">Burger</h2>
+        <div id="foodList">
+          <div class="catfood-item">
+            <h3 class="cat-h">Veg Burger</h3>
+            <p class="cat-p">₹250</p>
+            <button class="catbtn" onclick="addToCart('Veg Burger', 250)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Paneer Burger</h3>
+            <p class="cat-p">₹315</p>
+            <button class="catbtn" onclick="addToCart('Paneer Burger', 315)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Aloo Tikki Burger</h3>
+            <p class="cat-p">₹475</p>
+            <button
+              class="catbtn"
+              onclick="addToCart('Aloo Tikki Burger', 475)"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="pasta">
+        <h2 class="cat-food">Pasta</h2>
+        <div id="foodList">
+          <div class="catfood-item">
+            <h3 class="cat-h">White Sauce Pasta</h3>
+            <p class="cat-p">₹410</p>
+            <button
+              class="catbtn"
+              onclick="addToCart('White Sauce Pasta', 410)"
+            >
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Red Sauce Pasta</h3>
+            <p class="cat-p">₹490</p>
+            <button class="catbtn" onclick="addToCart('Red Sauce Pasta', 490)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Cheese Pasta</h3>
+            <p class="cat-p">₹490</p>
+            <button class="catbtn" onclick="addToCart('Cheese Pasta', 490)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="dessert">
+        <h2 class="cat-food">Dessert</h2>
+        <div id="foodList">
+          <div class="catfood-item">
+            <h3 class="cat-h">Chocolate Cake</h3>
+            <p class="cat-p">₹250</p>
+            <button class="catbtn" onclick="addToCart('Chocolate Cake', 250)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Ice Cream</h3>
+            <p class="cat-p">₹150</p>
+            <button class="catbtn" onclick="addToCart('Ice Cream', 150)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Gulab Jamun</h3>
+            <p class="cat-p">₹100</p>
+            <button class="catbtn" onclick="addToCart('Gulab Jamun', 100)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="salad">
+        <h2 class="cat-food">Salad</h2>
+        <div id="foodList">
+          <div class="catfood-item">
+            <h3 class="cat-h">Greek Salad</h3>
+            <p class="cat-p">₹200</p>
+            <button class="catbtn" onclick="addToCart('Greek Salad', 200)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Caesar Salad</h3>
+            <p class="cat-p">₹250</p>
+            <button class="catbtn" onclick="addToCart('Caesar Salad', 250)">
+              Add to Cart
+            </button>
+          </div>
+          <div class="catfood-item">
+            <h3 class="cat-h">Waldorf Salad</h3>
+            <p class="cat-p">₹300</p>
+            <button class="catbtn" onclick="addToCart('Waldorf Salad', 300)">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="cartModal" class="cart-modal">
+        <h3>Order Items</h3>
+        <ul id="cartItems"></ul>
+        <p id="cartp">Total: ₹<span id="totalPrice">0</span></p>
+        <button class="order-btn" onclick="openPayment()">Order Now</button>
+        <button class="close-btn" onclick="closeCart()">Close</button>
+      </div>
+
+      <div id="paymentModal" class="payment-modal">
+        <h3>Payment</h3>
+        <p>Total Payable: ₹<span id="payAmount">0</span></p>
+        <button class="order-btn" onclick="processPayment()">Pay Now</button>
+        <button class="close-btn" onclick="closePayment()">Cancel</button>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

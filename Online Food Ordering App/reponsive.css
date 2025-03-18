@@ -1,0 +1,33 @@
+
+
+@media screen and (max-width: 1000px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .navbar {
+        height: 447px;
+        flex-direction: column;
+        transition: all 1s ease-out;
+    }
+
+    .rightNav {
+        text-align: center;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .hemburger {
+        display: block;
+    }
+
+    .h-nav-resp {
+        height: 72px;
+    }
+
+    .v-class-resp {
+        opacity: 0;
+    }
+}
